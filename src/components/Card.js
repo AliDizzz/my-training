@@ -11,8 +11,8 @@ const Card = (props) => {
                 <div className="data-container">
                     <ul>
                     <li>{country.name}</li>
-                    <li>{country.capital}</li>
-                    <li>{country.population}</li>
+                    <li>Capitale : {country.capital}</li>
+                    <li>Popu : {country.population}</li>
                     </ul>
                 </div>
             </li>
