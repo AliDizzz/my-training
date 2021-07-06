@@ -4,6 +4,11 @@ const Card = (props) => {
     // const country = props.country; ou alors en destructuring ->
     const { country } = props;
 
+    const numberFormat = (x) => {
+        //regex, tous les 3 caractère, tu me met "un espace vide"
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "");
+    } 
+
     return (
         
             <li className="card">
@@ -12,7 +17,7 @@ const Card = (props) => {
                     <ul>
                     <li>{country.name}</li>
                     <li>Capitale : {country.capital}</li>
-                    <li>Popu : {country.population}</li>
+                    <li>Popu : {numberFormat(country.population)}</li>
                     </ul>
                 </div>
             </li>
