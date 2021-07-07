@@ -61,6 +61,10 @@ const Countries = () => {
                     } )}
                 </ul>
             </div>
+            <div className="cancel">
+                {/* si "selectedRadio" alors, tu inclus le "h5" */}
+                {selectedRadio && (<h5 onClick={() => setSelectedRadio("")} >annuler la recherche</h5>) }   
+            </div>
             <ul className="countries-list">
                 {sortedData
                 .filter((country) => country.region.includes(selectedRadio))
